@@ -75,7 +75,34 @@
 			<div class="row">
 				<div class="col-xs-2">
 					<div id="fh5co-logo"><a href="index.html">Menikah<strong>.</strong></a></div>
-					<div id="jamdemo"></div>
+					<div class="simply-countdown simply-countdown-one">
+						<div class="simply-section simply-days-section">
+						  	<div>
+						        <span class="simply-amount" id="day">00</span>
+							<span class="simply-word">days</span>
+						  	</div>
+						</div>
+						
+						<div class="simply-section simply-hours-section">
+						    	<div>
+							<span class="simply-amount" id="hour">00</span>
+							<span class="simply-word">hours</span>
+						    	</div>
+						</div>
+						
+						<div class="simply-section simply-minutes-section">
+							<div>
+							<span class="simply-amount" id="minute">00</span>
+							<span class="simply-word">minutes</span>
+							</div>
+						</div>
+						<div class="simply-section simply-seconds-section">
+							<div>
+							<span class="simply-amount" id="second">00</span>
+							<span class="simply-word">seconds</span>
+							</div>
+						</div>
+					</div>
 				</div>
 				<div class="col-xs-10 text-right menu-1">
 					
@@ -330,8 +357,11 @@ var x = setInterval(function() {
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
   // Display the result in the element with id="jamdemo"
-  document.getElementById("jamdemo").innerHTML = days + "d " + hours + "h "
-  + minutes + "m " + seconds + "s ";
+//   	document.getElementById("jamdemo").innerHTML = days + "d " + hours + "h "  + minutes + "m " + seconds + "s ";
+  	document.getElementById("day").innerHTML = days;
+	document.getElementById("hour").innerHTML = hours;
+	document.getElementById("minute").innerHTML = minutes;
+	document.getElementById("second").innerHTML = seconds;
 
   // If the count down is finished, write some text
   if (distance < 0) {
